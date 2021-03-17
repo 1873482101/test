@@ -15,6 +15,7 @@ public class FailServlet extends HttpServlet {
         //给页面写一句话
         //设置编码
         response.setContentType("text/html;charset=utf-8");
+
         response.getWriter().write("登录失败，用户名或者密码错误");
 
     }
