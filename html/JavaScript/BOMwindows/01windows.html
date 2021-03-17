@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01windows</title>
+</head>
+<body>
+<input id="openBtn" type="button" value="打开窗口">
+<input id="closeBtn0" type="button" value="关闭当前窗口">
+<input id="closeBtn" type="button" value="关闭打开的窗口">
+<script>
+    //打开新窗口
+    var openBtn = document.getElementById("openBtn");
+    var newWindow;
+    openBtn.onclick = function (ev) {
+        newWindow = open("https://www.baidu.com");
+    }
+    //关闭窗口
+    var closeBtn = document.getElementById("closeBtn");
+    closeBtn.onclick = function (ev) {
+        newWindow.close();
+    }
+    //关闭窗口
+    var closeBtn = document.getElementById("closeBtn0");
+    closeBtn.onclick = function (ev) {
+        close();
+    }
+    function funza(){
+        alert('yfshh');
+    }
+
+    //一次性定时器
+    var id = setTimeout(funza,1000);
+    clearTimeout(id);
+    //循环定时器
+    var id2 = setInterval(funza,2000);
+    //关闭循环定时器
+    clearInterval(id2);
+
+</script>
+</body>
+</html>
+<!--
+窗口
+    open 打开一个新的浏览器窗口
+    close关闭一个浏览器窗口 newWindow.close(newWindow 为浏览器窗口对象)关闭指定浏览器窗口
+定时器
+    setTimeout() 在指定的毫秒数后调用或计算表达式
+    clearTimeout（） 取消 setTimeout（）方法设置的timeout
+
+    setInterval（） 按照指定的周期（ms）来调用函数或计算表达式
+    clearInterval() 取消setInterval（）设置的timeout
+
+-->

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开关案例</title>
+</head>
+<body>
+<img id="light"  src="img/down.png" width="60" height="100">
+<script>
+    var light = document.getElementById("light")
+    var flag = false;
+    light.onclick = function (ev) {
+        if(flag){
+            light.src = "img/down.png";
+            flag = false;
+        }else {
+            setTimeout("light.src = \"img/up.png\";",500)//定时器延时执行
+            //light.src = "img/up.png";
+            flag = true;
+        }
+    }
+
+</script>
+</body>
+</html>

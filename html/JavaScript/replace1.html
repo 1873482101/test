@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>replace1</title>
+</head>
+<body>
+<p>替换"Microsoft" 为 "Runoob":</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo">请访问Microsoft！</p>
+<script>
+    function myFunction() {
+        var str = document.getElementById("demo").innerHTML;
+        var txt = str.replace("Microsoft","Runoob");
+        document.getElementById("demo").innerHTML = txt;
+
+    }
+
+</script>
+</body>
+</html>

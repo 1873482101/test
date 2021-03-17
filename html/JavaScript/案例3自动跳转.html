@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>案例3自动跳转</title>
+    <style>
+        p{
+            text-align: center;
+        }
+        span{
+            color: red;
+        }
+        body {
+            background: url("img/img1.png") ;
+        }
+
+    </style>
+</head>
+<body>
+<p>
+    <span id="time">5</span>秒后自动跳转到百度
+</p>
+<script>
+
+    //定时器倒计时
+    var i=5;
+    function f1() {
+        i--;
+        var time = document.getElementById("time");
+        time.innerHTML = i+"";
+        if(i<=0){
+            clearInterval(id1);
+            location.href = "https://www.baidu.com";
+        }
+    }
+    //定时器
+    var id1 = setInterval(f1,1000);
+
+</script>
+
+</body>
+</html>

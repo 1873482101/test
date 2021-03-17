@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <script>
+
+        /*
+        点击超链接或者图片需要更换图片
+        1.给超链接和图片绑定单击事件
+        2重新设置图片的src属性
+         */
+        window.onload = function (ev) {
+            var img = document.getElementById("checkCode");
+            img.onclick=function () {
+                //加时间戳
+                var time = new Date().getTime();
+                img.src="/day14_test/checkCodeServlet?"+time;
+            }
+
+            var chande = document.getElementById("change");
+            chande.onclick=function (ev1) {
+                var time = new Date().getTime();
+                chande.href="/day14_test/checkCodeServlet?"+time;
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="checkCode" src="/day14_test/checkCodeServlet"/>
+    <a id="change" href="">看不清换一张</a>
+</body>
+</html>

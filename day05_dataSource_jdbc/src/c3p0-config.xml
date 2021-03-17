@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--使用默认的配置读取连接池对象-->
+<!--/*
+注意<?xml version="1.0" encoding="UTF-8"?>放在第一行前面不能用空格或其他语句
+测试时超时时间尽量大
+下方旧版本的配置需要更换为现在代码里面的驱动参数
+ <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/db3</property>//如果不想改这一行可以在 MYSQL数据库mysql表中加SET GLOBAL time_zone = '+8:00';
+
+ */ -->
+<c3p0-config>
+    <default-config>
+        <!--连接参数-->
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/db3?&amp;useSSL=false&amp;serverTimezone=UTC</property>
+        <!--<property name="jdbcUrl">jdbc:mysql://localhost:3306/db3</property>-->
+
+        <property name="user">root</property>
+        <property name="password">123456</property>
+        <!--连接池参数-->
+
+        <!--初始化时获取三个连接，取值应在minPoolSize与maxPoolSize之间。Default: 3 -->
+        <property name="initialPoolSize">5</property>
+        <property name="minPoolSize">2</property>
+        <property name="maxPoolSize">10</property>
+        <!--当连接池用完时客户端调用getConnection()后等待获取新连接的时间，超时后将抛出
+        SQLException,如设为0则无限期等待。单位毫秒。Default: 0 -->
+        <property name="checkoutTimeout">3000</property>
+    </default-config>
+
+    <named-config name="mySource">
+        <!--连接参数-->
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/db3?&amp;useSSL=false&amp;serverTimezone=UTC</property>
+        <!--<property name="jdbcUrl">jdbc:mysql://localhost:3306/db3</property>-->
+
+        <property name="user">root</property>
+        <property name="password">123456</property>
+        <!--连接池参数-->
+        <property name="initialPoolSize">5</property>
+        <property name="minPoolSize">2</property>
+        <property name="maxPoolSize">15</property>
+        <property name="checkoutTimeout">3000</property>
+    </named-config>
+</c3p0-config>

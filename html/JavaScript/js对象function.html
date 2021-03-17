@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js对象</title>
+</head>
+<script>
+    function add() {
+        //在方法声明中有一个隐藏的内置对象（数组），arguments，封装所有的实际参数
+        var sum = 0;
+        for(var i = 0;i<arguments.length;i++){
+            sum += arguments[i];
+
+        }
+        return sum ;
+    }
+    alert(add(1,3,2,55));
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+<script>
+    var date = new Date();
+    document.write(date + "<br>");
+    document.write(date.toLocaleString()+"<br>");
+    document.write(date.toLocaleDateString()+"<br>")
+    document.write(date.toLocaleTimeString()+"<br>")
+
+    /*
+    toLocaleString()返回当前date对象对应的时间本地字符串格式
+    gettime获取毫秒值，返回当前时间和1970年1/1 0点的毫秒值差
+    toLocaleTimeString()还回当前的时间（12小时制）
+     */
+</script>
+</body>
+</html>

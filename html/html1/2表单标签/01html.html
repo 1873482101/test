@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01表格</title>
+</head>
+<body>
+跨列合并
+<table align="center" border="2px" width="100%">
+    <tr align="center">
+        <td>姓名</td>
+        <td>年龄</td>
+        <td>数学</td>
+        <td>语文</td>
+    </tr>
+    <tr>
+        <td colspan="2">杨帆</td>
+
+        <td>80</td>
+        <td>88</td>
+    </tr>
+    <tr>
+        <td>憨憨</td>
+        <td>20</td>
+        <td>88</td>
+        <td>99</td>
+    </tr>
+
+
+</table>
+<br>
+跨行合并
+<br>
+<table align="center" border="2px" width="100%">
+    <tr >
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>数学</th>
+        <th>语文</th>
+    </tr>
+    <tr>
+        <th rowspan="2">杨帆</th>
+        <th>20</th>
+        <th>80</th>
+        <th>88</th>
+    </tr>
+    <tr>
+
+        <th>20</th>
+        <th>88</th>
+        <th>99</th>
+    </tr>
+
+
+</table>
+
+</body>
+</html>
+
+<!--
+th 和 td 差別在于  th表格居中加粗
+单元格合并一定要删除被合并的单元
+colspan 跨列合幷 单元格 值是合并单元格的列序号
+rowspan 跨行合并 单元格
+-->

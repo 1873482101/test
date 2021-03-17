@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eval_url</title>
+    <script>
+        var msg = "https://www.bilibili.com/video/BV1mE411h7Co?username=杨帆&password=憨憨";
+        msg = encodeURI(msg);
+        document.write("url编码"+msg+"<br/>");
+        document.write("url解码"+decodeURI(msg)+"<br/>");
+        eval("var list='憨憨'");
+        document.write(list);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+<!--
+编码：encodeURI /encodeURIComponent() 后者可编码字符量更多
+解码：decodeURI /decodeURIComponent()
+
+eval将字符串变为脚本代码执行
+-->

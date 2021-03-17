@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+
+</head>
+<body>
+<img id="img" src="img/img1.png" width="100%">
+<script>
+    //修改图片属性
+    var i = 1;
+    function fun1() {
+        i++;
+        if (i>3){
+            i=1;
+        }
+        var img = document.getElementById("img");
+        img.src = "img/img"+i+".png";
+
+
+    }
+    //定时器
+    setInterval(fun1,3000);
+</script>
+
+</body>
+</html>
